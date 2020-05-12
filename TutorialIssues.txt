@@ -1,0 +1,30 @@
+Video 5
+uses angular-cli instead of @angular/cli,
+we'll see if that causes issues
+    -New angular requires settings, select ok for all of those
+    -angular.json -> outputPath == outDir
+
+Due to bootstrap updates, need to use older version of CSS:
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/3.4.1/sandstone/bootstrap.min.css" rel="stylesheet">
+
+Video 6
+need to use imports = [FlashMessagesService.forRoot()]
+actually use older version of FlashMessagesService; npm install angular2-flash-messages@1.0.8
+
+Video 7
+Whole http has changed, no easy fix
+
+
+
+SOLUTION
+video 5
+MUST HAVE NODE 12.x.x
+remove @angular/cli with "sudo npm uninstall -g @angular/cli"
+install older angular with "sudo npm install -g angular-cli"
+or if that fails, use: "sudo npm install -g --unsafe-perm angular-cli"
+
+video 6
+npm install angular2-flash-messages@1.0.8
+
+video 9
+If tokenNotExpired() is not working, user tokenNotExpired("id_token") at 12.50
